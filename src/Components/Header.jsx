@@ -20,7 +20,7 @@ const StyledLink = styled(NavLink)`
   color: black;
 
   &.active {
-    color: blue;
+    color: #5703df;
     text-decoration: underline;
   }
 

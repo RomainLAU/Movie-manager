@@ -79,6 +79,12 @@ export default function MovieCard({ movieData }) {
     }
   }
 
+  function handleKeyPressed(e) {
+    if (e.key === 'Enter') {
+      handleUpdate();
+    }
+  }
+
   return (
     <Card>
       <img src={movieData.image} alt={movieData.title} />
@@ -87,6 +93,7 @@ export default function MovieCard({ movieData }) {
           type="text"
           value={newTitle}
           onChange={(e) => setNewTitle(e.target.value)}
+          onKeyDown={(e) => handleKeyPressed(e)}
         />
       ) : (
         <Title>{movieData.title}</Title>
