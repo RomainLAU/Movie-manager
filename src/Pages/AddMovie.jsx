@@ -56,14 +56,14 @@ export default function AddMovie() {
   }, []);
 
   function handleCreate() {
-    setMovies([...movies, newMovie]);
-
     if (
       newMovie.id.length > 0 &&
       newMovie.title.length > 0 &&
       newMovie.category.length > 0 &&
       newMovie.image.length > 0
     ) {
+      setMovies([...movies, newMovie]);
+
       setNewMovie({
         id: (movies.length + 1).toString(),
         title: '',
